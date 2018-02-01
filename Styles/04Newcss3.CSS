@@ -1,0 +1,137 @@
+body {
+text-align: center;
+}
+
+/*-----------------------------------------------*/
+
+#principal {
+display: block;
+width: 500px;
+margin: 50px auto;
+padding: 15px;
+text-align: center;
+border: 1px solid #999999;
+background: #DDDDDD;
+
+
+/*Outline.  Esta propiedad era usada para crear un segundo borde, y ahora ese borde puede ser mostrado alejado del borde real del elemento.  */
+outline: 2px dashed #000099;
+outline-offset: 15px;
+
+
+/* Border-radius. Efecto de esquinas redondeadas
+-moz-border-radius: 20px 10px 30px 50px;
+-webkit-border-radius: 20px 10px 30px 50px; */
+border-radius: 20px 10px 30px 50px;
+
+/*Box-shadow. Sombras a cajas.
+Parametros
+  El primero,es el color
+  Los siguientes dos valores, expresados en pixeles, establecen el desplazamiento de la sombra. Este desplazamiento puede ser positivo o negativo.
+  Un cuarto valor que se puede agregar a la propiedad ya estudiada es la distancia de difuminación.
+  El último valor posible para box-shadow no es un número sino más bien una palabra clave: inset. Esta palabra clave
+  convierte a la sombra externa en una sombra interna
+
+-moz-box-shadow: rgb(150,150,150) 5px 5px;
+-webkit-box-shadow: rgb(150,150,150) 5px 5px; */
+box-shadow: rgb(150,150,150) 5px 5px 10px inset;
+
+/*Gradiente lineal
+background: -webkit-linear-gradient(top, #FFFFFF, #006699);
+background: -moz-linear-gradient(top, #FFFFFF, #006699);  */
+
+/* También podemos declarar los puntos de terminación para cada color:
+background: -webkit-linear-gradient(top, #FFFFFF 50%, #006699 90%);
+background: -moz-linear-gradient(top, #FFFFFF 50%, #006699 90%);
+*/
+
+/* Gradiente radial */
+background: -webkit-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+background: -moz-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+
+
+/*La propiedad transform puede operar cuatro transformaciones básicas en un elemento: scale (escalar), rotate (rotar),
+skew (inclinar) y translate (trasladar o mover).
+transform: scale(1);
+transform: scale(2,-1);  Invierte el elemento
+transform: rotate(30deg);
+transform: skew(20deg);
+transform: translate(100px);
+transform: translateY(100px) rotate(45deg) scaleX(0.3);
+*/
+
+
+/* Transiciones.   fue incluida para suavizar los cambios, creando mágicamente el resto de los pasos que se
+encuentran implícitos en el movimiento. Solo agregando esta propiedad forzamos al navegador a tomar cartas en el asunto,
+crear para nosotros todos esos pasos invisibles, y generar una transición suave desde un estado al otro. */
+transition: transform 1s ease-in-out 0.5s;
+
+
+}
+
+/* Transformaciones dinamicas */
+#principal:hover{
+transform: rotate(5deg);
+}
+
+
+
+
+/*-----------------------------------------------*/
+/*
+RGBA    tiene cuatro atributos. Los primeros tres son similares a los usados en rgb() y simplemente declaran
+        los valores para los colores rojo, verde y azul en números decimales del 0 al 255. El último, en cambio, corresponde a la
+        nueva capacidad de opacidad. Este valor se debe encontrar dentro de un rango que va de 0 a 1, con 0 como totalmente
+        transparente y 1 como totalmente opaco.
+
+HSLA    es simplemente un función diferente para generar colores, pero es más intuitiva que rgba(). Algunos
+        diseñadores encontrarán más fácil generar un set de colores personalizado utilizando hsla(). La sintaxis de esta función es:
+        hsla(tono, saturación, luminosidad, opacidad).
+          Siguiendo la sintaxis, tono representa el color extraído de una rueda imaginaria y es expresado en grados desde 0 a 360.
+        Cerca de 0 y 360 están los colores rojos, cerca de 120 los verdes y cerca de 240 los azules. El valor saturación es
+        representado en porcentaje, desde 0% (escala de grises) a 100% (todo color o completamente saturado). La luminosidad
+        es también un valor en porcentaje desde 0% (completamente oscuro) a 100% (completamente iluminado). El valor 50%
+        representa luminosidad normal o promedio. El último valor, así como en rgba(), representa la opacidad.
+
+
+
+*/
+
+
+#titulo {
+ font: bold 36px verdana, sans-serif;
+
+/*Text-shadow. Sombra para texto, los parametros son parecidos a  box-shadow, solo recibe los primeros 3 parametros.*/
+text-shadow: rgb(0,0,150) 3px 3px 5px;
+color: hsla(120, 100%, 50%, 0.5);
+
+ /*
+ text-shadow: rgb(0,0,150) 3px 3px 5px;
+ text-shadow: rgba(0,0,0,0.5) 3px 3px 5px;
+*/
+
+
+}
+
+/*-----------------------------------------------*/
+
+/*@font-face. permite a los diseñadores proveer un archivo conteniendo una fuente específica para mostrar
+sus textos en la página. */
+@font-face {
+  font-family: MiFuente;
+src: URL("FontFaces\04B_30__.TTF");
+/*url("URL");*/
+}
+
+/*-----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------*/

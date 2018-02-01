@@ -1,0 +1,15 @@
+
+
+header, section, footer, aside, nav, article, figure, figcaption,
+hgroup, output{
+display: block;
+}
+
+
+
+#cajalienzo {
+float: left; }
+
+
+#cajalienzo3 {
+float: left; }

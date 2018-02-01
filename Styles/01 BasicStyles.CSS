@@ -1,0 +1,21 @@
+span { font-size: 40px }
+
+#texto1 { font-size: 30px;
+          color:Purple }
+
+
+.CTexto1 { font-size: 50px;
+          color:yellow }
+
+
+
+/*Referenciando con cualquier atributo.
+Ahora podemos referenciar un elemento no solo por los atributos id y class sino también a través de cualquier otro atributo */
+p[name^="mi"] { font-size: 10px } /* ^= será asignada a todo elemento <p> que contiene un atributo name con un valor comenzado
+                                    en “mi” (por ejemplo, “mitexto”, “micasa”). */
+p[name$="mi"] { font-size: 20px } /* $= será asignada a todo elemento <p> que contiene un atributo name con un valor
+                                    finalizado en “mi” (por ejemplo “textomi”, “casami”). */
+p[name*="mi"] { font-size: 30px; color:Blue } /* *=será asignada a todo elemento <p> que contiene un atributo name con un valor que incluye el texto “mi” */
+
+
+/******************************************************************************/

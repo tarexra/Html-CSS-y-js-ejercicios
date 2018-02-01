@@ -1,0 +1,58 @@
+/*
+*{
+margin: 0px;
+}
+p:nth-child(1){
+background: #999999;
+} p:nth-child(2){
+background: #CCCCCC;
+} p:nth-child(3){
+background: #999999;
+} p:nth-child(4){
+background: #CCCCCC;
+}
+
+*/
+
+/* Produce el mismo efecto que la parte comentada*/
+*{
+margin: 10px;
+}
+p:nth-child(odd){
+background: #999999;
+}
+p:nth-child(even){
+background: #CCCCCC;
+}
+
+/*
+nth-child     -> Selector por indice
+first-child   -> referencia solo el primer hijo
+last-child    -> referencia solo el último hijo
+only-child    -> afecta un elemento siempre y cuando sea el único hijo disponible
+*/
+
+
+/* .............................................................................. */
+
+/*not()  utilizada realizar una negación */
+/*:not(p) { color: Purple; }  /*Todo el texto en HTML que no sea P es purpura */
+body :not(p) { color: green; } /*Todo el texto en body que no sea P es purpura */
+p:not(.classy) { color: red; } /*Todo el texto en body que no sea P es purpura */
+
+/* .............................................................................. */
+
+/*está indicando que el elemento a ser afectado por la regla es el elemento de la derecha cuando tiene al de la izquierda como su padre. */
+div > p.mitexto2{
+color: #990000;
+}
+
+/* referencia al elemento de la derecha cuando es inmediatamente precedido por el de la izquierda. Ambos elementos deben compartir el mismo padre */
+p.mitexto2 + p{
+color: blue;
+}
+
+/* referencia a los elemento precedidos por el de la izquierda. Ambos elementos deben compartir el mismo padre */
+p.mitexto3 ~ p{
+color: #990000;
+}

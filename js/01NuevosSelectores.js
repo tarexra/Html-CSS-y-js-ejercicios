@@ -1,0 +1,48 @@
+
+//Descomenta la funcion que se quiera probar.
+function hacerclic(){
+  //AgregaEventoPrimerParrafo()
+
+  //AgregaEventoATodasLasEtiquetas()
+
+  //AgregarEventosATodosLosParrafos();
+
+  AgregaEventoPorID();
+
+}
+
+function AgregaEventoATodasLasEtiquetas(){
+  //querySelectorAll retorna todos los elementos que concuerdan con el grupo de selectores declarados entre paréntesis
+  var lista=document.querySelectorAll("#principal p");
+  lista[1].onclick=MostrarAlerta; //Se agrega el evento al segundo elemento
+}
+
+
+function AgregaEventoPorEtiqueta(){
+  document.getElementsByTagName('p')[0].onclick=MostrarAlerta;
+}
+
+function AgregarEventosATodosLosParrafos(){
+  var lista=document.querySelectorAll("#principal p");
+  for(var f=0; f<lista.length; f++){
+    lista[f].onclick=MostrarAlerta;
+  }
+}
+
+function AgregaEventoPorID(){
+  //Obtiene un elemento por ID y posteriormente obtiene todos los parafos de texto dentro de ella.
+  var lista=document.getElementById('principal').querySelectorAll("p");
+  lista[0].onclick=MostrarAlerta;
+}
+
+function AgregaEventoPrimerParrafo(){
+  //querySelector retorna el primer elemento que concuerda con el grupo de selectores especificados entre paréntesis
+  document.querySelector("#principal p:first-child").onclick=MostrarAlerta;
+}
+
+function MostrarAlerta(){
+  alert('hizo clic!');
+}
+
+//window.onload=hacerclic;
+window.addEventListener('load', hacerclic, false );

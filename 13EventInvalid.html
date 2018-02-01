@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Validaciones evento Invalid Formularios</title>
+		<script>
+			function iniciar(){
+				edad=document.getElementById("miedad");
+				//Se agrega el evento de cambio
+				edad.addEventListener("change", cambiarrango, false);
+				/* Cada vez que el usuario envía el formulario, un evento es disparado si un campo inválido es detectado.
+				   Escucha para este evento para ofrecer una respuesta personalizada, ocurre justo despues de la validación a menos que alguien diga lo contrario :P */
+				document.frmInformacion.addEventListener("invalid",validacion, true);
+				//Se registra el evento click
+				document.getElementById("enviar").addEventListener("click",	enviar, false);
+
+				document.frmInformacion.addEventListener("input", controlar,false);
+
+			}
+
+			//See actualiza la salida en base al balor del rango  (input type="range")
+			function cambiarrango(){
+				var salida=document.getElementById("rango");
+				var calc=edad.value-20;
+				if(calc<20){
+					calc=0;
+					edad.value=20;
+				}
+				salida.innerHTML=calc+' a '+edad.value;
+			}
+
+			//cuando el usuario hace clic en el botón “ingresar”, un evento invalid será disparado desde cada campo inválido y el color de fondo de esos campos será cambiado a rojo
+			function validacion(e){
+				var elemento=e.target; //e.target(referencia al elemento <input> inválido.): Obtiene el elemento para el cual ocurre el evento.
+				elemento.style.background='#FFDDDD';
+			}
+
+			function enviar(){
+				var elemento=document.getElementById("usuario");
+				var valido=frmInformacion.checkValidity();       //Se realiza el proceso de validación
+				if(valido){
+					document.frmInformacion.submit();  //Se envia el formulario
+				}
+				else if(elemento.validity.patternMismatch || elemento.validity.valueMissing){
+					alert('el nombre de usuario debe tener mínimo de 3 caracteres');
+				}
+			}
+
+			//Val;idacion en tiempo real.  blanco para un campo válido y rojo para uno inválido
+			function controlar(e){
+				var elemento=e.target;
+				if(elemento.validity.valid){
+				elemento.style.background='#FFFFFF';
+				}else{
+				elemento.style.background='#FFDDDD';
+				}
+			}
+			//addEventListener() Registra un evento a un objeto en específico
+			window.addEventListener("load", iniciar, false);
+
+			/*
+				ValidityState.badInput					-->indica que el usuario ha proporcionado una entrada que el navegador no puede convertir.
+				ValidityState.customError				-->Indica que el mensaje de validacion para los elementos personalizados ha sido puesto en una cadena no vacia por la llamada del metodo setCustomValidity().
+				ValidityState.patternMismatch		-->Indica que el valor no coincide con el patrón especificado.
+				ValidityState.rangeOverflow			-->Indica que el valor es mayor que el máximo especificado por el atributo max.
+				ValidityState.rangeUnderflow		-->Indica que el valor es menor que el mínimo especificado por el atributo min.
+				ValidityState.stepMismatch			-->indica que el valor no se ajusta a las reglas determinadas por el atributo de paso (es decir, no es divisible de manera uniforme por el valor de paso).
+				ValidityState.tooLong						-->indica que el valor excede los maxlength especificados para objetos HTMLInputElement o HTMLTextAreaElement
+				ValidityState.tooShort					-->indica que el valor no cumple con la minilongitud especificada para los objetos HTMLInputElement o HTMLTextAreaElement.
+				ValidityState.typeMismatch			-->Indica que el valor no está en la sintaxis requerida (cuando el tipo es correo electrónico o url).
+				ValidityState.valid							-->indica que el elemento cumple con todas las validaciones de restricciones y, por lo tanto, se considera válido.
+				ValidityState.valueMissing			--indica que el elemento tiene un atributo requerido, pero no tiene valor.
+
+			*/
+		</script>
+
+<!-- ***********************************************************************************************************-->
+	</head>
+
+	<body>
+		<section>
+			<form name="frmInformacion" method="get">
+				Usuario: <input pattern="[A-Za-z]{3,}" name="usuario" id="usuario" maxlength="10" required>
+				Email:   <input type="email" name="miemail" id="miemail" required>
+				Rango de Edad: <input type="range" name="miedad" id="miedad" min="0" max="80" step="20" value="20">
+				<output id="rango">0 a 20</output>
+				<input type="button" id="enviar" value="ingresar">
+			</form>
+		</section>
+
+	</body>
+</html>
