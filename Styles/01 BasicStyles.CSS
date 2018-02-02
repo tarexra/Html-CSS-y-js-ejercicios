@@ -3,7 +3,8 @@ span { font-size: 40px }
 
 #texto1 { font-size: 30px;
           color:Purple;
-          font-family: Monospace; }
+          font-family: Monospace, Helvetica; //si el navegador no encuentra la primera fuente usa la segunda
+        }
 
 
 .CTexto1 { font-size: 50px;
