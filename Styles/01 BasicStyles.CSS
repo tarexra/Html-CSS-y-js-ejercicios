@@ -5,7 +5,7 @@ span { font-size: 40px }
 /* Referenciando con el atributo id */
 #texto1 { font-size: 30px;
           color:Purple;
-          font-family: Monospace, Helvetica; //si el navegador no encuentra la primera fuente usa la segunda
+          font-family: Monospace, Helvetica; /*si el navegador no encuentra la primera fuente usa la segunda*/
         }
 
 /* Referenciando con Class */
