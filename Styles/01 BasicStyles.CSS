@@ -1,12 +1,14 @@
 
+/* Referenciado por elemento */
 span { font-size: 40px }
 
+/* Referenciando con el atributo id */
 #texto1 { font-size: 30px;
           color:Purple;
           font-family: Monospace, Helvetica; //si el navegador no encuentra la primera fuente usa la segunda
         }
 
-
+/* Referenciando con Class */
 .CTexto1 { font-size: 50px;
           color:yellow; }
 
@@ -14,7 +16,9 @@ span { font-size: 40px }
 
 
 /*Referenciando con cualquier atributo.
-Ahora podemos referenciar un elemento no solo por los atributos id y class sino también a través de cualquier otro atributo */
+Ahora podemos referenciar un elemento no solo por los atributos id y class sino también a través de 
+cualquier otro atributo. en el caso especifico del ejemplo es name*/
+
 p[name^="mi"] { font-size: 10px } /* ^= será asignada a todo elemento <p> que contiene un atributo name con un valor comenzado
                                     en “mi” (por ejemplo, “mitexto”, “micasa”). */
 p[name$="mi"] { font-size: 20px } /* $= será asignada a todo elemento <p> que contiene un atributo name con un valor

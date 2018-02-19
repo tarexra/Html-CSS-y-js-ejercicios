@@ -42,17 +42,20 @@ p:not(.classy) { color: red; } /*Todo el texto en body que no sea P es purpura *
 
 /* .............................................................................. */
 
-/*está indicando que el elemento a ser afectado por la regla es el elemento de la derecha cuando tiene al de la izquierda como su padre. */
+/*está indicando que el elemento a ser afectado por la regla es el elemento de la derecha(P) cuando 
+tiene al de la izquierda como su padre(div). */
 div > p.mitexto2{
 color: #990000;
 }
 
-/* referencia al elemento de la derecha cuando es inmediatamente precedido por el de la izquierda. Ambos elementos deben compartir el mismo padre */
+/* referencia al elemento de la derecha cuando es inmediatamente precedido por el de la izquierda. 
+Ambos elementos deben compartir el mismo padre */
 p.mitexto2 + p{
 color: blue;
 }
 
-/* referencia a los elemento precedidos por el de la izquierda. Ambos elementos deben compartir el mismo padre */
+/* referencia a los elemento precedidos por el de la izquierda. Ambos elementos deben compartir el 
+mismo padre */
 p.mitexto3 ~ p{
 color: #990000;
 }
