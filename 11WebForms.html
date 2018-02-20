@@ -28,8 +28,13 @@
 					range  		<input type="range" name="rango" id="rango" min="0" max="10" step="5" autofocus><br />
 
 
+					select <select name="select1" id="select1">
+						<option value="Mexico">Mexico</option>
+						<option value="Colombia">Colombia</option>
+						<option value="Venezuela">Venezuela</option>
+					</select>
 				</fieldset>
-
+<br>
 				<fieldset name="Group2">
 				<legend>Fecha hora y color</legend>
 					date   		<input type="date" name="fecha" id="fecha"><br />
@@ -42,7 +47,7 @@
 
 			    </fieldset>
 
-
+<br>
 				<fieldset name="Group3">
 				<legend>pattern</legend>
 					<!--pattern: Usa expresiones regulares para personalizar reglas de validación.
@@ -50,7 +55,7 @@
 					Codigo postal <input type="text" pattern="[0-9]{5}" name="codigopostal" id="codigopostal" title="inserte los 5 números de su código postal"><br />
 
 				</fieldset>
-
+<br>
 				<fieldset name="Group4">
 				<legend>Nuevos elementos para formularios</legend>
 					<datalist id="informacion">
@@ -61,7 +66,7 @@
 					Telefonos en lista: <input type="tel" name="telefono" id="telefono" list="informacion" autocomplete="off" >
 
 				</fieldset>
-
+<br>
 				<input type="submit" value="Enviar">
 			</form>
 
