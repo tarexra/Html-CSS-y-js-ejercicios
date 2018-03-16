@@ -54,7 +54,7 @@ Eventos
 progress 					--> Este evento es disparado periódicamente para informar el progreso en la descarga del medio.
 canplaythrough 		-->Este evento es disparado cuando el medio completo puede ser reproducido sin interrupción.
 canplay 					-->Este evento es disparado cuando el medio puede ser reproducido. A diferencia del evento previo, éste es
-											disparado cuando solo parte del archivo fue descargado (solo los primeros cuadros de un video, por ejemplo).
+								disparado cuando solo parte del archivo fue descargado (solo los primeros cuadros de un video, por ejemplo).
 ended 						-->Este evento es disparado cuando la reproducción llega al final del medio.
 pause 						-->Este evento es disparado cuando la reproducción es pausada.
 play 							-->Este evento es disparado cuando el medio comienza a ser reproducido.

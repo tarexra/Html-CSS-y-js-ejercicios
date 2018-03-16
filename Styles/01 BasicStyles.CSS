@@ -14,9 +14,12 @@ span { font-size: 40px }
 
 .CTexto2 { font-family: Lobster; } /*Aplicacion de la fuente importada */
 
+.Grilla{
+	display: inline-grid;
+}
 
 /*Referenciando con cualquier atributo.
-Ahora podemos referenciar un elemento no solo por los atributos id y class sino también a través de 
+Ahora podemos referenciar un elemento no solo por los atributos id y class sino también a través de
 cualquier otro atributo. en el caso especifico del ejemplo es name*/
 
 p[name^="mi"] { font-size: 10px } /* ^= será asignada a todo elemento <p> que contiene un atributo name con un valor comenzado
@@ -24,6 +27,17 @@ p[name^="mi"] { font-size: 10px } /* ^= será asignada a todo elemento <p> que c
 p[name$="mi"] { font-size: 20px } /* $= será asignada a todo elemento <p> que contiene un atributo name con un valor
                                     finalizado en “mi” (por ejemplo “textomi”, “casami”). */
 p[name*="mi"] { font-size: 30px; color:Blue } /* *=será asignada a todo elemento <p> que contiene un atributo name con un valor que incluye el texto “mi” */
+
+
+/* El parrafo que tiene el atributo class y la clase verde asignada*/
+p[class="verde"]{
+	background-color: lightblue;
+}
+
+/* El parrafo que tiene el atributo class y al menos tenga asignada la clase parrafo */
+p[class~="rojo"]{
+	background-color: orange;
+}
 
 
 /******************************************************************************/

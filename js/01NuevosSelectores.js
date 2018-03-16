@@ -1,24 +1,30 @@
 
 //Descomenta la funcion que se quiera probar.
 function hacerclic(){
-  //AgregaEventoPrimerParrafo()
+	AgregaEventoATodasLasEtiquetas();
+	
+	//AgregaEventoPorTagName();
+	
+	//AgregaEventoPrimerParrafo();
+  
+	//AgregarEventosATodosLosParrafos();
 
-  //AgregaEventoATodasLasEtiquetas()
+	//AgregaEventoPorID();
 
-  //AgregarEventosATodosLosParrafos();
-
-  AgregaEventoPorID();
-
-}
+ }
 
 function AgregaEventoATodasLasEtiquetas(){
   //querySelectorAll retorna todos los elementos que concuerdan con el grupo de selectores declarados entre paréntesis
-  var lista=document.querySelectorAll("#principal p");
-  lista[1].onclick=MostrarAlerta; //Se agrega el evento al segundo elemento
+  var lista=document.querySelectorAll("#principal Label");
+  for(var f=0; f<lista.length; f++){
+    lista[f].onclick=MostrarAlerta;
+  }
+
 }
 
+/*5919*/
 
-function AgregaEventoPorEtiqueta(){
+function AgregaEventoPorTagName(){
   document.getElementsByTagName('p')[0].onclick=MostrarAlerta;
 }
 

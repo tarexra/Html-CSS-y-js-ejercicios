@@ -1,5 +1,6 @@
 ﻿
 function iniciar(){
+	
 	var elemento=document.getElementById('lienzo');
 	lienzo=elemento.getContext('2d'); //Genera un contexto de dibujo que será asignado al lienzo.
 
@@ -207,7 +208,7 @@ function modificarimagen(e) {
 }
 
 function animacion(e) {
-		var salida=document.getElementById("Angulo");
+	var salida=document.getElementById("Angulo");
     lienzo.clearRect(0, 0, 300, 500);
     var xraton = e.clientX;
     var yraton = e.clientY;

@@ -32,30 +32,55 @@ last-child    -> referencia solo el último hijo
 only-child    -> afecta un elemento siempre y cuando sea el único hijo disponible
 */
 
+.ejemplo{
+
+}
 
 /* .............................................................................. */
 
 /*not()  utilizada realizar una negación */
 /*:not(p) { color: Purple; }  /*Todo el texto en HTML que no sea P es purpura */
 body :not(p) { color: green; } /*Todo el texto en body que no sea P es purpura */
-p:not(.classy) { color: red; } /*Todo el texto en body que no sea P es purpura */
+p:not(.classy) { color: red; } /* */
+
+/* .............................................................................. */
+/*Aplicacionde estilos a hijos directos */
+header > div{
+	background-color: black;
+	height: 20px;
+	width: 100%;
+	color: #fff;
+}
+
+
+/* El parrafo que tiene la clase mitextX*/
+p.mitextX{
+color: #694343;
+}
+
+/*El parrafo que esta dentro de la clase ejemplo */
+.ejemplo p{
+	color: red;
+}
 
 /* .............................................................................. */
 
-/*está indicando que el elemento a ser afectado por la regla es el elemento de la derecha(P) cuando 
+/*está indicando que el elemento a ser afectado por la regla es el elemento de la derecha(P) cuando
 tiene al de la izquierda como su padre(div). */
 div > p.mitexto2{
 color: #990000;
 }
 
-/* referencia al elemento de la derecha cuando es inmediatamente precedido por el de la izquierda. 
+/* referencia al elemento de la derecha cuando es inmediatamente precedido por el de la izquierda.
 Ambos elementos deben compartir el mismo padre */
 p.mitexto2 + p{
 color: blue;
 }
 
-/* referencia a los elemento precedidos por el de la izquierda. Ambos elementos deben compartir el 
+/* referencia a los elemento precedidos por el de la izquierda. Ambos elementos deben compartir el
 mismo padre */
 p.mitexto3 ~ p{
 color: #990000;
 }
+
+

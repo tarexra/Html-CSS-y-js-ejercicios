@@ -49,7 +49,6 @@ background: -moz-linear-gradient(top, #FFFFFF 50%, #006699 90%);
 background: -webkit-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
 background: -moz-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
 
-
 /*La propiedad transform puede operar cuatro transformaciones básicas en un elemento: scale (escalar), rotate (rotar),
 skew (inclinar) y translate (trasladar o mover).
 transform: scale(1);
@@ -99,16 +98,16 @@ HSLA    es simplemente un función diferente para generar colores, pero es más 
 
 
 #titulo {
- font: bold 36px verdana, sans-serif;
+  font: bold 36px verdana, sans-serif;
 
-/*Text-shadow. Sombra para texto, los parametros son parecidos a  box-shadow, solo recibe los primeros 3 parametros.*/
-text-shadow: rgb(0,0,150) 3px 3px 5px;
-color: hsla(120, 100%, 50%, 0.5);
+  /*Text-shadow. Sombra para texto, los parametros son parecidos a  box-shadow, solo recibe los primeros 3 parametros.*/
+  text-shadow: rgb(0,0,150) 3px 3px 5px;
+  color: hsla(120, 100%, 50%, 0.5);
 
- /*
- text-shadow: rgb(0,0,150) 3px 3px 5px;
- text-shadow: rgba(0,0,0,0.5) 3px 3px 5px;
-*/
+   /*
+   text-shadow: rgb(0,0,150) 3px 3px 5px;
+   text-shadow: rgba(0,0,0,0.5) 3px 3px 5px;
+  */
 
 
 }
@@ -122,4 +121,3 @@ sus textos en la página. */
 src: URL("FontFaces\04B_30__.TTF");
 /*url("URL");*/
 }
-
