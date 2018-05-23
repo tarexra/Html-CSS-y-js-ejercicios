@@ -1,3 +1,4 @@
+
 function iniciar() {
     var imagenes = document.querySelectorAll('#cajaimagenes > img');
     for (var i = 0; i < imagenes.length; i++) {
@@ -48,3 +49,4 @@ function soltado(e) {
 }
 
 window.addEventListener('load', iniciar, false);
+

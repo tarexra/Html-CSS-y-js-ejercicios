@@ -15,12 +15,11 @@ function hacerclic(){
 
 function AgregaEventoATodasLasEtiquetas(){
   //querySelectorAll retorna todos los elementos que concuerdan con el grupo de selectores declarados entre paréntesis
-  var lista=document.querySelectorAll("#principal Label");
-  for(var f=0; f<lista.length; f++){
-    lista[f].onclick=MostrarAlerta;
+    var lista=document.querySelectorAll("#principal Label");
+    for(var f=0; f<lista.length; f++){
+      lista[f].onclick=MostrarAlerta;
+    }
   }
-
-}
 
 /*5919*/
 

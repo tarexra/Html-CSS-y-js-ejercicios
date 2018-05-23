@@ -45,7 +45,7 @@
 				}
 			}
 
-			//Val;idacion en tiempo real.  blanco para un campo válido y rojo para uno inválido
+			//Validacion en tiempo real.  blanco para un campo válido y rojo para uno inválido
 			function controlar(e){
 				var elemento=e.target;
 				if(elemento.validity.valid){
@@ -53,6 +53,7 @@
 				}else{
 				elemento.style.background='#FFDDDD';
 				}
+				
 			}
 			//addEventListener() Registra un evento a un objeto en específico
 			window.addEventListener("load", iniciar, false);
