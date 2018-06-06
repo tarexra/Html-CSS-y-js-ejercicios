@@ -41,7 +41,7 @@ function AgregaEventoPorID(){
 }
 
 function AgregaEventoPrimerParrafo(){
-  //querySelector retorna el primer elemento que concuerda con el grupo de selectores especificados entre paréntesis
+  //querySelector retorna 
   document.querySelector("#principal p:first-child").onclick=MostrarAlerta;
 }
 
